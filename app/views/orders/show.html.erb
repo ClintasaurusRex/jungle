@@ -30,11 +30,11 @@
 
   <div class="order-total">
     <strong>Total Amount: </strong><%= @order.total.format %>
+    <div class="order-email">
+      <strong>Email used: </strong><%= @order.email %>
+    </div>
   </div>
 
-  <div class="order-email">
-    <strong>Email used: </strong><%= @order.email %>
-  </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 

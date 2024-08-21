@@ -111,3 +111,13 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+div.order-total {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  float: right;
+
+  .order-email{
+    padding-top: 21px;
+  }
+}
