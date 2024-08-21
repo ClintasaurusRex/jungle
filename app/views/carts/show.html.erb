@@ -4,14 +4,6 @@
     <h1>My Cart</h1>
   </header>
 
-  <% if enhanced_cart.empty? %>
-  <div>
-    <div class="alert alert-info empty-cart-alert" role="alert">
-      <h3> Your cart is empty!</h3>
-      <%= link_to root_path, class: 'btn-link' do %>
-        <button class="btn btn-primary">Continue Shopping</button>
-        <% end %>
-    </div>
 
   <div class="panel panel-default items">
     <table class="table table-bordered">
@@ -42,6 +34,14 @@
   </div>
 
 
+  <% if enhanced_cart.empty? %>
+  <div>
+    <div class="alert alert-info empty-cart-alert" role="alert">
+      <h3> Your cart is empty!</h3>
+      <%= link_to root_path, class: 'btn-link' do %>
+        <button class="btn btn-primary">Continue Shopping</button>
+        <% end %>
+    </div>
 
       <% else %>
         <div class="row">
