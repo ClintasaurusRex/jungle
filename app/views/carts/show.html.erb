@@ -3,7 +3,6 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
   <% if enhanced_cart.empty? %>
   <div>
     <div class="alert alert-info empty-cart-alert" role="alert">
@@ -40,10 +39,6 @@
       </tfoot>
     </table>
   </div>
-
-
-
-
         <div class="row">
           <div class="col-xs-12">
             <%= form_tag orders_path do %>
@@ -56,7 +51,4 @@
           </div>
         </div>
         <% end %>
-
-
-
 </section>
