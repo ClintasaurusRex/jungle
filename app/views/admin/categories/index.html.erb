@@ -1,0 +1,28 @@
+<h1>Admin::Categories#index</h1>
+<div class="panel panel-default products">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Created At</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td>
+            <%= category.name %>
+          </td>
+          <td>
+            <%= category.created_at %>
+          </td>
+          <!-- <td>
+            <%= link_to 'Show' , [:admin, category], class: 'btn btn-info' %>
+          </td> -->
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>
