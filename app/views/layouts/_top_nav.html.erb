@@ -37,8 +37,9 @@
             <% Category.all.each do |category| %>
             <li class="nav-item">
               <%= link_to category.name, category, class: "nav-link" %>
-            </li>
-            <% end %>
+              </li>
+              <% end %>
+              <%= link_to 'About', about_index_path, class: "nav-link" %>
           <%# </ul>
         </li> %>
       </ul>
@@ -83,6 +84,6 @@ const gnr = () => {
   };
   const title = document.querySelector("header.hero");
   title.addEventListener("dblclick", gnr);
-  
+
 })()
   </script>
