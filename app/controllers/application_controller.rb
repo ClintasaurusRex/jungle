@@ -1,8 +1,12 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  
+
   protect_from_forgery with: :exception
+
+  before_action :set_current_user
+
+  helper_method :current_user, :logged_in?
 
   private
 
@@ -28,5 +32,21 @@ class ApplicationController < ActionController::Base
       expires: 10.days.from_now
     }
     cookies[:cart]
+  end
+
+  def set_current_user
+    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  end
+
+  def current_user
+    @current_user
+  end
+
+  def logged_in?
+    !!current_user
+  end
+
+  def authorize
+    redirect_to login_path, alert: 'Please log in to access this page.' unless logged_in?
   end
 end

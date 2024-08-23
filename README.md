@@ -29,3 +29,41 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+
+
+
+
+# <h1>Signup!</h1>
+
+# <div class="container mt-5">
+#   <h1 class="mb-4">Sign Up</h1>
+
+#   <%= form_with(model: @user, local: true, class: "needs-validation", novalidate: true) do |f| %>
+#     <div class="mb-3">
+#       <%= f.label :first_name, class: "form-label" %>
+#       <%= f.text_field :name, class: "form-control", required: true %>
+#     </div>
+#     <div class="mb-3">
+#       <%= f.label :last_name, class: "form-label" %>
+#       <%= f.text_field :name, class: "form-control", required: true %>
+#     </div>
+
+#     <div class="mb-3">
+#       <%= f.label :email, class: "form-label" %>
+#       <%= f.email_field :email, class: "form-control", required: true %>
+#     </div>
+
+#     <div class="mb-3">
+#       <%= f.label :password, class: "form-label" %>
+#       <%= f.password_field :password, class: "form-control", required: true, minlength: 6 %>
+#     </div>
+
+#     <div class="mb-3">
+#       <%= f.label :password_confirmation, "Confirm Password", class: "form-label" %>
+#       <%= f.password_field :password_confirmation, class: "form-control", required: true %>
+#     </div>
+
+#     <%= f.submit "Sign Up", class: "btn btn-primary" %>
+#   <% end %>
+# </div>
