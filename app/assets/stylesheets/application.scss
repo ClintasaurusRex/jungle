@@ -103,6 +103,7 @@ form.button_to {
     text-transform: uppercase;
     font-style: italic;
   }
+
 }
 
 .page-header {
@@ -165,4 +166,23 @@ div.order-total {
   100% {
   color: rgb(255, 0, 0); /* Back to Red */
   }
+
+}
+.login-signup{
+  display: flex;
+// flex-direction: row-reverse;
+justify-content: space-between;
+padding: 10px;
+}
+.login-signup-btn {
+  margin: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+
+  &:hover {
+    background-color: #007bff; /* Change to your desired color */
+    transform: scale(1.1); /* Makes the button pop out */
+  }
+}
+.welcome-message {
+  animation: flashColors 5s infinite;
 }

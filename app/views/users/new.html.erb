@@ -3,55 +3,48 @@
 <%= form_with(model: @user, local: true, url: signup_path) do |form| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2>
+        <%= pluralize(@user.errors.count, "error" ) %> prohibited this user from being saved:
+      </h2>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+          <li>
+            <%= message %>
+          </li>
+          <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
+      <td>
+        <main class="forms">
+          <div class="field">
+            <%= form.label :first_name %>
+              <%= form.text_field :first_name, class: 'custom-input' %>
+          </div>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
-  </div>
+          <div class="field">
+            <%= form.label :last_name %>
+              <%= form.text_field :last_name, class: 'custom-input' %>
+          </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
+          <div class="field">
+            <%= form.label :email %>
+              <%= form.email_field :email, class: 'custom-input' %>
+          </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
+          <div class="field">
+            <%= form.label :password %>
+              <%= form.password_field :password, class: 'custom-input' %>
+          </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
+          <div class="field">
+            <%= form.label :password_confirmation %>
+              <%= form.password_field :password_confirmation, class: 'custom-input' %>
+          </div>
 
-  <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Sign Up' %>
-  </div>
-<% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="actions">
+            <%= form.submit 'Sign Up' %>
+          </div>
+        </main>
+      </td>
+      <% end %>
