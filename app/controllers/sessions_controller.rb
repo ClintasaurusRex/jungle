@@ -1,6 +1,11 @@
 class SessionsController < ApplicationController
+  def new
+  end
 
   def create
+    # Debugging line
+    logger.debug "Params: #{params.inspect}"
+
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
