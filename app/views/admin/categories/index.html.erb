@@ -1,6 +1,8 @@
-<h1>Admin::Categories#index</h1>
+<h1 class="about-index">Categories</h1>
 <div class="panel panel-default products">
-
+  <div>
+    <%= link_to 'Back' , [:admin, :products], class: 'btn btn-secondary' %>
+  </div>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -18,11 +20,14 @@
           <td>
             <%= category.created_at %>
           </td>
-          <!-- <td>
-            <%= link_to 'Show' , [:admin, category], class: 'btn btn-info' %>
-          </td> -->
+          <td>
+          <td>
+            <%= button_to 'Delete' , [:admin, category], method: :delete, data: { confirm: 'Are you sure?' },
+              class: 'btn btn-danger btn-sm' %>
+          </td>
         </tr>
         <% end %>
     </tbody>
   </table>
+  <%= link_to '+ New Category' , [:new, :admin, :category], class: 'btn btn-primary' %>
 </div>

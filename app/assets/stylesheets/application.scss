@@ -155,22 +155,21 @@ div.order-total {
 
 @keyframes flashColors {
   0% {
-  color: rgb(255, 0, 0); /* Red */
+  color: rgb(255, 0, 0);
   }
   33% {
-  color: rgb(0, 255, 0); /* Green */
+  color: rgb(0, 255, 0);
   }
   66% {
-  color: rgb(0, 0, 255); /* Blue */
+  color: rgb(0, 0, 255);
   }
   100% {
-  color: rgb(255, 0, 0); /* Back to Red */
+  color: rgb(255, 0, 0);
   }
 
 }
 .login-signup{
   display: flex;
-// flex-direction: row-reverse;
 justify-content: space-between;
 padding: 10px;
 }
@@ -179,8 +178,8 @@ padding: 10px;
   transition: transform 0.2s, background-color 0.2s;
 
   &:hover {
-    background-color: #007bff; /* Change to your desired color */
-    transform: scale(1.1); /* Makes the button pop out */
+    background-color: #007bff;
+    transform: scale(1.1);
   }
 }
 .welcome-message {

@@ -1,4 +1,4 @@
-<h1>Admin::Categories#new</h1>
+<h1 class="about-index">Add New Category</h1>
 
 <section class="admin-products-new">
 
@@ -7,7 +7,8 @@
   </header>
 
   <div class="well">
-    <%= link_to 'All Products' , [:admin, :products], class: 'btn btn-info' %>
+ <%= link_to 'Back', [:admin, :products], class: 'btn btn-secondary' %>
+    <%= button_to 'Admin Categories', [:admin, :categories], method: :get, class: 'btn btn-primary' %>
   </div>
 
   <div class="row">
@@ -26,15 +27,11 @@
             </ul>
           </div>
           <% end %>
-
             <div class="form-group">
               <%= form.label :name %>
-                <%= form.text_field :name, class: 'form-control' %>
+                <%= form.text_field :name, class: 'form-control', id: 'category_name' %>
             </div>
-
-
-
-            <%= form.submit 'Create Category' , class: 'btn btn-primary' %>
+            <%= form.submit 'Create Category' , class: 'btn btn-primary', disabled: button_disabled?(form), id: 'submit_button' %>
               <% end %>
     </div>
   </div>

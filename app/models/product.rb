@@ -9,7 +9,7 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :quantity, presence: true
   validates :category, presence: true
-
+# Sold out helper method
   def sold_out?
     quantity.zero?
   end

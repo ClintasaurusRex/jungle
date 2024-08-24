@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on("turbolinks:load", function () {
+  $("#category_name").on("input", function () {
+    var submitButton = $("#submit_button");
+    if ($(this).val().trim() === "") {
+      submitButton.prop("disabled", true);
+    } else {
+      submitButton.prop("disabled", false);
+    }
+  });
+});
