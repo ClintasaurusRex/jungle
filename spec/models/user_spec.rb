@@ -90,23 +90,33 @@ RSpec.describe User, type: :model do
 end
 
 describe '.authenticate_with_credentials' do
-  # Examples for this class method go here
+  before do
+    @user = User.create!(
+      first_name: 'Test',
+      last_name: 'User',
+      email: 'test@example.com',
+      password: 'password123',
+      password_confirmation: 'password123'
+    )
+  end
 
   it 'authenticates a user with valid credentials' do
-    # Test case for valid authentication
+    authenticated_user = User.authenticate_with_credentials('test@example.com', 'password123')
+    expect(authenticated_user).to eq(@user)
   end
 
   it 'does not authenticate a user with invalid credentials' do
-    # Test case for invalid authentication
+    authenticated_user = User.authenticate_with_credentials('test@example.com', 'wrongpassword')
+    expect(authenticated_user).to be_nil
   end
 
   it 'authenticates a user with spaces around email' do
-    # Test case for email with leading/trailing spaces
+    authenticated_user = User.authenticate_with_credentials('  test@example.com  ', 'password123')
+    expect(authenticated_user).to eq(@user)
   end
 
   it 'authenticates a user with wrong case email' do
-    # Test case for email with mixed case
+    authenticated_user = User.authenticate_with_credentials('TEST@example.com', 'password123')
+    expect(authenticated_user).to eq(@user)
   end
-
-  # Add more test cases as needed
 end
