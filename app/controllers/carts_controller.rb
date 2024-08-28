@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :authorize
+  # before_action :authorize
 
   # Display the contents of the cart
   def show
@@ -7,10 +7,12 @@ class CartsController < ApplicationController
 
   # Add an item to the cart
   def add_item
-    product_id = params[:product_id].to_s
-    modify_cart_delta(product_id, +1)
-
-    redirect_back fallback_location: root_path
+    product_id = params[:product_id]
+    cart = cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
+    cart[product_id] = (cart[product_id] || 0) + 1
+    update_cart(cart)
+    flash[:notice] = "Product added to cart successfully!"
+    redirect_to product_path(product_id)
   end
 
   # Remove an item from the cart
@@ -20,6 +22,15 @@ class CartsController < ApplicationController
 
     redirect_back fallback_location: root_path
   end
+
+  def add_to_cart
+    product_id = params[:product_id]
+    session[:cart][product_id] ||= 0
+    session[:cart][product_id] += 1
+    redirect_back(fallback_location: root_path, notice: 'Item added to cart!')
+  end
+
+
 
   private
 
@@ -35,5 +46,6 @@ class CartsController < ApplicationController
     # Update the cart in the session
     update_cart cart
   end
+
 
 end

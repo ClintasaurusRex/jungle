@@ -49,4 +49,6 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to login_path, alert: 'Please log in to access this page.' unless logged_in?
   end
+
+
 end

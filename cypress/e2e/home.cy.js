@@ -10,10 +10,5 @@ describe("Home Page", () => {
   it("clicks the login-signup button", () => {
     cy.visit("/");
     cy.get(".btn.btn-info.login-signup-btn").first().should("be.visible");
-    // Add assertions here based on expected behavior after clicking
-    // For example:
-    // cy.url().should("include", "/login");
-    // or
-    // cy.get(".login-form").should("be.visible");
   });
 });
