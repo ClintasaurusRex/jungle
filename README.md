@@ -40,14 +40,14 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshots
 
-![Homepage](docs/screenshots/homepage.png)
 *Homepage of Jungle*
+![Homepage](/docs/jungle-main.png)
 
-![About Page](docs/screenshots/homepage.png)
 *Homepage of Jungle*
+![About Page](/docs/jungle-about.png)
 
-![Product Page](/docs/jungle-products.png)
 *Individual product page*
+![Product Page](/docs/jungle-products.png)
 
-![Cart](docs/screenshots/cart.png)
 *Shopping cart view*
+![Cart](/docs/jungle-cart.png)
