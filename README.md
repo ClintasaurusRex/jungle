@@ -30,4 +30,24 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - PostgreSQL 9.x
 - Stripe
 
+## Features
 
+- Product browsing and searching
+- Shopping cart functionality
+- Secure checkout process with Stripe integration
+- User authentication and account management
+- Admin dashboard for inventory management
+
+## Screenshots
+
+![Homepage](docs/screenshots/homepage.png)
+*Homepage of Jungle*
+
+![About Page](docs/screenshots/homepage.png)
+*Homepage of Jungle*
+
+![Product Page](/docs/jungle-products.png)
+*Individual product page*
+
+![Cart](docs/screenshots/cart.png)
+*Shopping cart view*
