@@ -43,7 +43,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 *Homepage of Jungle*
 ![Homepage](/docs/jungle-main.png)
 
-*Homepage of Jungle*
+*About page of Jungle*
 ![About Page](/docs/jungle-about.png)
 
 *Individual product page*
